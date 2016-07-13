@@ -11,4 +11,26 @@ namespace Phphilosophy\Http\Interfaces;
  */
 class SessionInterface {
     
+    /**
+     * @param   string  $name
+     * @param   mixed   $default
+     *
+     * @return  mixed
+     */
+    public function get($name = null, $default = null);
+    
+    /**
+     * @param   string  $name
+     * @param   mixed   $value
+     *
+     * @return  void
+     */
+    public function set(string $name, $value);
+    
+    /**
+     * @param   string  $name
+     *
+     * @return  void
+     */
+    public function remove(string $name);
 }
