@@ -41,7 +41,7 @@ class Request implements RequestInterface {
      * @param   \Phphilosophy\Http\Interfaces\SessionInterface  $session
      */
     public function __construct(
-        $method,
+        string $method,
         UriInterface $uri,
         InputInterface $input,
         SessionInterface $session

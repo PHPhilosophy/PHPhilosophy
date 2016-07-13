@@ -22,7 +22,7 @@ class Phphilosophy {
      * @param   \Phphilosophy\Http\Interfaces\RequestInterface  $request
      */
     public function __construct(RequestInterface $request) {
-        
+        $this->request = $request;
     }
     
     /**
