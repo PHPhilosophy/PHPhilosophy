@@ -24,4 +24,11 @@ class Uri implements UriInterface {
     public function __construct($uri) {
         $this->uri = $uri;
     }
+    
+    /**
+     * @return  string
+     */
+    public function getUri() {
+        return $this->uri;
+    }
 }
