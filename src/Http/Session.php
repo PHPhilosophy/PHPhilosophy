@@ -2,6 +2,8 @@
 
 namespace Phphilosophy\Http;
 
+use Phphilosophy\Http\Interfaces\SessionInterface;
+
 /**
  * @author      Lisa Saalfrank <lisa.saalfrank@web.de>
  * @copyright   2016 Lisa Saalfrank
@@ -9,6 +11,6 @@ namespace Phphilosophy\Http;
  * @package     Phphilosophy\Http
  * @version     1.0-thales
  */
-class Session {
+class Session implements SessionInterface {
     
 }

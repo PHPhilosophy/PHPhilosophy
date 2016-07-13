@@ -2,6 +2,8 @@
 
 namespace Phphilosophy\Http;
 
+use Phphilosophy\Http\Interfaces\ResponseInterface;
+
 /**
  * @author      Lisa Saalfrank <lisa.saalfrank@web.de>
  * @copyright   2016 Lisa Saalfrank
@@ -9,6 +11,6 @@ namespace Phphilosophy\Http;
  * @package     Phphilosophy\Http
  * @version     1.0-thales
  */
-class Response {
+class Response implements ResponseInterface {
     
 }
