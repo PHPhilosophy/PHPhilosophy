@@ -2,6 +2,8 @@
 
 namespace Phphilosophy;
 
+use Phphilosophy\Http\Interfaces\RequestInterface;
+
 /**
  * @author      Lisa Saalfrank <lisa.saalfrank@web.de>
  * @copyright   2016 Lisa Saalfrank
@@ -11,6 +13,18 @@ namespace Phphilosophy;
  */
 class Phphilosophy {
 
+    /**
+     * @var \Phphilosophy\Http\Interfaces\RequestInterface
+     */
+    private $request;
+    
+    /**
+     * @param   \Phphilosophy\Http\Interfaces\RequestInterface  $request
+     */
+    public function __construct(RequestInterface $request) {
+        
+    }
+    
     /**
      * @param   string  $pattern
      * @param   array   $action
