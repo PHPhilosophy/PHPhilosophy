@@ -13,4 +13,15 @@ use Phphilosophy\Http\Interfaces\UriInterface;
  */
 class Uri implements UriInterface {
     
+    /**
+     * @var string
+     */
+    private $uri;
+    
+    /**
+     * @param   string  $uri
+     */
+    public function __construct($uri) {
+        $this->uri = $uri;
+    }
 }

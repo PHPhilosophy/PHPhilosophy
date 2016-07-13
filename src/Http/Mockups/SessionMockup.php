@@ -13,4 +13,15 @@ use Phphilosophy\Http\Interfaces\SessionInterface;
  */
 class SessionMockup implements SessionInterface {
     
+    /**
+     * @var array
+     */
+    private $session = [];
+    
+    /**
+     * @param   array   $session
+     */
+    public function __construct(array $session) {
+        $this->session = $session;
+    }
 }

@@ -13,4 +13,18 @@ use Phphilosophy\Http\Interfaces\InputInterface;
  */
 class Input implements InputInterface {
     
+    /**
+     * @var array
+     */
+    private $input = [];
+    
+    /**
+     * @param   array   $get
+     * @param   array   $post
+     */
+    public function __construct(array $get, array $post)
+    {
+        $this->input['get'] = $get;
+        $this->input['post'] = $post;
+    }
 }
