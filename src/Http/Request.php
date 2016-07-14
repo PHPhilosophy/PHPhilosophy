@@ -60,10 +60,24 @@ class Request implements RequestInterface {
     }
     
     /**
+     * @return  \Phphilosophy\Http\Interfaces\UriInterface
+     */
+    public function getUri() {
+        return $this->uri;
+    }
+    
+    /**
      * @return  \Phphilosophy\Http\Interfaces\InputInterface
      */
     public function getInput() {
         return $this->input;
+    }
+    
+    /**
+     * @return  \Phphilosophy\Http\Interfaces\SessionInterface
+     */
+    public function getSession() {
+        return $this->session;
     }
     
     /**
@@ -79,6 +93,18 @@ class Request implements RequestInterface {
     }
     
     /**
+     * @param   \Phphilosophy\Http\Interfaces\UriInterface   $uri
+     *
+     * @return  self
+     */
+    public function withUri(UriInterface $uri)
+    {
+        $clone = clone $this;
+        $clone->uri = $uri;
+        return $clone;
+    }
+    
+    /**
      * @param   \Phphilosophy\Http\Interfaces\InputInterface    $input
      *
      * @return  self
@@ -87,6 +113,18 @@ class Request implements RequestInterface {
     {
         $clone = clone $this;
         $clone->input = $input;
+        return $clone;
+    }
+    
+    /**
+     * @param   \Phphilosophy\Http\Interfaces\SessionInterface   $session
+     *
+     * @return  self
+     */
+    public function withSession(SessionInterface $session)
+    {
+        $clone = clone $this;
+        $clone->session = $session;
         return $clone;
     }
     
@@ -108,5 +146,15 @@ class Request implements RequestInterface {
      */
     public function post($name = null, $default = null) {
         return $this->input->post($name, $default);
+    }
+    
+    /**
+     * @param   string  $name
+     * @param   mixed   $default
+     *
+     * @return  mixed
+     */
+    public function session($name = null, $default = null) {
+        return $this->session->get($name, $default);
     }
 }
