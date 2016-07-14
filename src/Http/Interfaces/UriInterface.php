@@ -11,4 +11,25 @@ namespace Phphilosophy\Http\Interfaces;
  */
 class UriInterface {
     
+    /**
+     * @return  string
+     */
+    public function getUri():string;
+    
+    /**
+     * @return  void
+     */
+    public function findSegments();
+    
+    /**
+     * @return  array
+     */
+    public function getSegments():array;
+    
+    /**
+     * @param   int     $key
+     *
+     * @return  string
+     */
+    public function getSegment(int $key):string;
 }
