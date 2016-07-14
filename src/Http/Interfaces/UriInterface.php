@@ -19,7 +19,7 @@ class UriInterface {
     /**
      * @return  void
      */
-    public function findSegments();
+    protected function findSegments();
     
     /**
      * @return  array

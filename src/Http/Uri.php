@@ -42,7 +42,7 @@ class Uri implements UriInterface {
     /**
      * @return  void
      */
-    public function findSegments()
+    protected function findSegments()
     {
         // Normalize the uri and pattern
         $uri = trim($this->uri, '/');
