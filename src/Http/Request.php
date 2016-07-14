@@ -51,4 +51,42 @@ class Request implements RequestInterface {
         $this->input = $input;
         $this->session = $session;
     }
+    
+    /**
+     * @return  string
+     */
+    public function getMethod():string {
+        return $this->method;
+    }
+    
+    /**
+     * @return  \Phphilosophy\Http\Interfaces\InputInterface
+     */
+    public function getInput() {
+        return $this->input;
+    }
+    
+    /**
+     * @param   string  $method
+     *
+     * @return  self
+     */
+    public function withMethod(string $method)
+    {
+        $clone = clone $this;
+        $clone->method = $method;
+        return $clone;
+    }
+    
+    /**
+     * @param   \Phphilosophy\Http\Interfaces\InputInterface    $input
+     *
+     * @return  self
+     */
+    public function withInput(InputInterface $input)
+    {
+        $clone = clone $this;
+        $clone->input = $input;
+        return $clone;
+    }
 }
