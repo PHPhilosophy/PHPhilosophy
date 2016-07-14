@@ -89,4 +89,24 @@ class Request implements RequestInterface {
         $clone->input = $input;
         return $clone;
     }
+    
+    /**
+     * @param   string  $name
+     * @param   mixed   $default
+     *
+     * @return  mixed
+     */
+    public function get($name = null, $default = null) {
+        return $this->input->get($name, $default);
+    }
+    
+    /**
+     * @param   string  $name
+     * @param   mixed   $default
+     *
+     * @return  mixed
+     */
+    public function post($name = null, $default = null) {
+        return $this->input->post($name, $default);
+    }
 }
