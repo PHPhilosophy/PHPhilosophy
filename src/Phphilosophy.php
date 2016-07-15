@@ -20,10 +20,41 @@ class Phphilosophy {
     private $request;
     
     /**
+     * @var array
+     */
+    private $config = [
+        // The default application name which will be used as the namespace
+        'app.name' => 'Application',
+        // The default path to the controller package
+        'controller.path' => 'Controller',
+        // The default path to the middleware package
+        'middleware.path' => 'Middleware'
+    ];
+    
+    /**
      * @param   \Phphilosophy\Http\Interfaces\RequestInterface  $request
      */
     public function __construct(RequestInterface $request) {
         $this->request = $request;
+    }
+    
+    /**
+     * @param   string  $key
+     * @param   mixed   $value
+     *
+     * @return  void
+     */
+    public function setConfig(string $key, $value) {
+        $this->config[$key] = $value;
+    }
+    
+    /**
+     * @param   string  $key
+     *
+     * @return  mixed
+     */
+    public function getConfig(string $key) {
+        return $this->config[$key];
     }
     
     /**
