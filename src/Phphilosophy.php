@@ -68,7 +68,7 @@ class Phphilosophy {
      * @return  void
      */
     public function add(array $methods, string $pattern, array $action, array $middleware = []) {
-        $route = new Route($pattern, $actions, $methods, $middleware);
+        $route = new Route($pattern, $action, $methods, $middleware);
     }
     
     /**
