@@ -28,7 +28,9 @@ class Phphilosophy {
         // The default path to the controller package
         'controller.path' => 'Controller',
         // The default path to the middleware package
-        'middleware.path' => 'Middleware'
+        'middleware.path' => 'Middleware',
+        // The default path to the view files
+        'view.path' => 'app/views'
     ];
     
     /**
