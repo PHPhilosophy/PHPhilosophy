@@ -9,7 +9,7 @@ namespace Phphilosophy\Http\Interfaces;
  * @package     Phphilosophy\Http\Interfaces
  * @version     1.0-thales
  */
-class SessionInterface {
+interface SessionInterface {
     
     /**
      * @param   string  $name
