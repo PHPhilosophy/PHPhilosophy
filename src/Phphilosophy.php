@@ -116,12 +116,12 @@ class Phphilosophy {
     }
     
     /**
+     * @param   string      $name
      * @param   array       $middleware
-     * @param   callable    $routes
      *
      * @return  void
      */
-    public function middleware(array $middleware, callable $routes) {
+    public function middleware(string $name, array $middleware) {
         
     }
     
