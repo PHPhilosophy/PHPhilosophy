@@ -35,8 +35,12 @@ class Template {
      * @param   string  $name
      * @param   array   $data
      */
-    public function __construct($path, $name, $extension, $data = [])
-    {
+    public function __construct(
+        string $path,
+        string $name,
+        string $extension,
+        array $data = []
+    ) {
         $this->path = $path;
         $this->name = $name;
         $this->extension = $extension;
@@ -46,7 +50,7 @@ class Template {
     /**
      * @return  string
      */
-    public function render()
+    public function render():string
     {
         // Extracting the variables
         extract($this->data);
@@ -68,7 +72,7 @@ class Template {
      *
      * @return  string
      */
-    private function getTemplate($name = null)
+    private function getTemplate($name = null):string
     {
         // If no name was set, load the original template
         if (is_null($name)) {
@@ -83,7 +87,7 @@ class Template {
      *
      * @return  void
      */
-    public function escape($string) {
+    public function escape(string $string) {
         echo htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
     }
     
@@ -93,7 +97,7 @@ class Template {
      *
      * @return  void
      */
-    public function insert($name, $data = [])
+    public function insert(string $name, array $data = [])
     {
         // Extracting the file wide variables
         extract($this->data);
